@@ -1,0 +1,11 @@
+cairocffi==1.4.0
+CairoSVG==2.6.0
+cffi==1.15.1
+cssselect2==0.7.0
+defusedxml==0.7.1
+multiavatar==1.0.3
+Pillow==9.4.0
+pycparser==2.21
+pyfiglet==0.8.post1
+tinycss2==1.2.1
+webencodings==0.5.1
