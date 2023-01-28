@@ -19,7 +19,8 @@ Using pip:
 Avatars will be stored in a folder media.
 It will be automatically created if it doesn't exist.
 
-
+## OUTPUT
+![Alt Text](Output.gif)()
 ## FUTURE FEATURES
 
 - [ ] Create CLI parameters acceptance for taking number of avatars to be created.
