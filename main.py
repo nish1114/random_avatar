@@ -1,11 +1,15 @@
 from multiavatar.multiavatar import multiavatar
 from uuid import uuid4
 from cairosvg import svg2png
+import string
+import secrets
 import pyfiglet
 import os
 
 def create_random_avatar():
-    svgCode = multiavatar(str(uuid4()), None, None)
+    source = string.ascii_letters + string.digits
+    random_string = ''.join((secrets.choice(source) for i in range(52)))
+    svgCode = multiavatar(random_string, None, None)
     return svgCode
 
 def svg_code_to_png(svg_code,n):
