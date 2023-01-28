@@ -20,7 +20,8 @@ Avatars will be stored in a folder media.
 It will be automatically created if it doesn't exist.
 
 ## OUTPUT
-![](https://github.com/jairajsahgal/random_avatar/blob/main/Output.gif)
+[Output](https://github.com/jairajsahgal/random_avatar/blob/6c943ece45400a8898140d6a4ccb4e886a879637/Output.gif)
+<!-- https://github.com/jairajsahgal/random_avatar/blob/6c943ece45400a8898140d6a4ccb4e886a879637/Output.gif -->
 ## FUTURE FEATURES
 
 - [ ] Create CLI parameters acceptance for taking number of avatars to be created.
