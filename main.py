@@ -4,6 +4,7 @@ from cairosvg import svg2png
 import string
 import secrets
 import pyfiglet
+import argparse
 import os
 
 def create_random_avatar():
@@ -29,18 +30,27 @@ def create_avatar(number_of_avatars=1):
 def main():
     ascii_banner = pyfiglet.figlet_format("CREATE N NUMBER OF AVATARS")
     print(ascii_banner)
-    number_of_avatars_banner = pyfiglet.figlet_format("ENTER NUMBER OF AVATARS TO CREATE:\n")
-    print(number_of_avatars_banner)
-    number_of_avatar = None
-    while number_of_avatar==None:
-        try:
-            number_of_avatar = int(input())
-        except ValueError as e:
-            error_banner = pyfiglet.figlet_format("KINDLY ENTER NUMBER:\n")
-            print(error_banner)
-            number_of_avatar = None
+    parse_results = parse_command_line()
+    if bool(parse_results):
+        number_of_avatar=parse_results
+    else:
+        number_of_avatars_banner = pyfiglet.figlet_format("ENTER NUMBER OF AVATARS TO CREATE:\n")
+        print(number_of_avatars_banner)
+        number_of_avatar = None
+        while number_of_avatar==None:
+            try:
+                number_of_avatar = int(input())
+            except ValueError as e:
+                error_banner = pyfiglet.figlet_format("KINDLY ENTER NUMBER:\n")
+                print(error_banner)
+                number_of_avatar = None
     create_avatar(number_of_avatar)
 
+def parse_command_line():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("n", type=int, help="Creates n avatars",default=0)
+    args = parser.parse_args()
+    return args.n
 
 
 main()
